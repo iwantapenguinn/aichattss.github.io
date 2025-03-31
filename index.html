@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Voice Chat with DeepSeek</title>
+    <title>DeepSeek Chat with API Key</title>
 </head>
 <body>
-    <button id="startBtn">Start Speaking</button>
-    <div id="transcript">Speech will appear here...</div>
-    <div id="response">AI response will appear here...</div>
+    <!-- Step 1: API Key Input (shown first) -->
+    <div id="apiKeySection">
+        <h2>Enter Your DeepSeek API Key</h2>
+        <input type="password" id="apiKeyInput" placeholder="sk-xxxxxxxxxxxxxxxx">
+        <button id="saveKeyBtn">Save Key</button>
+        <p><small>Never share your API key with others.</small></p>
+    </div>
+
+    <!-- Step 2: Chat Interface (hidden until key is saved) -->
+    <div id="chatSection" style="display: none;">
+        <button id="startBtn">Start Speaking</button>
+        <div id="transcript">Speech will appear here...</div>
+        <div id="response">AI response will appear here...</div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
